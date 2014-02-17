@@ -16,12 +16,13 @@ sudo /usr/share/elasticsearch/bin/plugin -i elasticsearch/elasticsearch-cloud-aw
 sudo /usr/share/elasticsearch/bin/plugin -i elasticsearch/marvel/latest
 
 # If a custom config file exists
-if [ -f ./elasticsearch.yml ]
+if [ -f /home/ec2-user/elasticsearch.yml ]
   then
-  	echo "Adding our custom config"
+  	echo "Removing the default config"
     sudo rm /etc/elasticsearch/elasticsearch.yml
-    sudo cp ./elasticsearch.yaml /etc/elasticsearch/elasticsearch.yml
+    echo "Adding our custom config"
+    sudo cp /home/ec2-user/elasticsearch.yml /etc/elasticsearch/elasticsearch.yml
 fi
 
-echo "Cleaning up..."
+echo "Cleaning up ES install resources..."
 rm $ES_FILENAME
