@@ -2,7 +2,7 @@
 cd ~
 
 # Config
-ES_VERSION="elasticsearch-1.0.0.RC2.noarch.rpm"
+ES_VERSION="elasticsearch-1.0.0.noarch.rpm"
 AWS_PLUGIN_VERSION="2.0.0.RC1"
 
 # Install ES
@@ -24,4 +24,4 @@ if [ -f ./elasticsearch.yaml ]
 fi
 
 echo "Cleaning up..."
-rm elasticsearch-1.0.0.RC2.noarch.rpm
+rm $ES_VERSION
