@@ -16,7 +16,7 @@ sudo /usr/share/elasticsearch/bin/plugin -i elasticsearch/elasticsearch-cloud-aw
 sudo /usr/share/elasticsearch/bin/plugin -i elasticsearch/marvel/latest
 
 # If a custom config file exists
-if [ -f ./elasticsearch.yaml ]
+if [ -f ./elasticsearch.yml ]
   then
   	echo "Adding our custom config"
     sudo rm /etc/elasticsearch/elasticsearch.yml
