@@ -2,13 +2,13 @@
 cd ~
 
 # Config
-ES_VERSION="elasticsearch-1.0.0.noarch.rpm"
+ES_FILENAME="elasticsearch-1.0.0.noarch.rpm"
 AWS_PLUGIN_VERSION="2.0.0.RC1"
 
 # Install ES
 echo "Installing Elasticsearch"
-wget https://download.elasticsearch.org/elasticsearch/elasticsearch/$ES_VERSION
-sudo rpm -ivh elasticsearch-1.0.0.RC2.noarch.rpm
+wget https://download.elasticsearch.org/elasticsearch/elasticsearch/$ES_FILENAME
+sudo rpm -ivh $ES_FILENAME
 echo "Elasticsearch Installed"
 
 # Install plugins (AWS and Marvel)
@@ -24,4 +24,4 @@ if [ -f ./elasticsearch.yaml ]
 fi
 
 echo "Cleaning up..."
-rm $ES_VERSION
+rm $ES_FILENAME
